@@ -1,6 +1,7 @@
 # this file is part of notepad++
 # Copyright (C)2008 Harry Bruin <harrybharry@users.sourceforge.net>
 #
+# Copyright (C)2019 8000V <x@zq.gripe>
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either
@@ -14,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-
+#log Modify compile file name
 # Directories:
 NPP_DIR			= ../src
 SCI_DIR			= ../../scintilla/include
@@ -242,16 +243,17 @@ LIBS			= -lcomdlg32 -lcomctl32 -lgdi32 -lole32 -loleacc -lshell32 -lshlwapi -ldb
 
 RC				= $(CROSS_COMPILE)windres
 
-OUT_NPP			= NotepadPP.exe
+OUT_NPP			= NotepadDD.exe
 
 EXEC			= ../bin/$(OUT_NPP)
 
-all: NotepadPP xmlcfg
+all: NotepadDD xmlcfg
 
 -include $(DEPS)
 
 # Main Notepad++ rule
-NotepadPP: $(EXEC)
+# Revise neme Notepad--
+NotepadDD: $(EXEC)
 
 $(EXEC): $(OBJS) $(OBJ_RES)
 	$(CXX) $(LDFLAGS) $^ $(LIBS) -o $@
@@ -273,4 +275,4 @@ clean:
 	-@$(RM) $(subst /,$(DIRSEP),$(DST_XMLCFG))
 	-@$(RM) $(subst /,$(DIRSEP),$(DEPS))
 
-.PHONY: all clean NotepadPP
+.PHONY: all clean NotepadDD
