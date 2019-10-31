@@ -1,4 +1,5 @@
-![logo](https://github.com/NameFull/notepad-dash-dash/raw/master/scintilla/icon/notepad-dash.jpg)
+![logo](https://img.vim-cn.com/0e/67231b7d5726b23ad4537e9309368454d04a3e.jpg)
+
 What is Notepad--this is a branch of notepad++
 
 separated from notepad++v7.8.1, and separated to form notepad-- v0.0.1 
